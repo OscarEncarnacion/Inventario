@@ -19,6 +19,10 @@ namespace Inventario
         public MainWindow()
         {
             InitializeComponent();
+            this.MinWidth = ((LoginView)MainContent.Content).MinWidth + 17;
+            this.MinHeight = ((LoginView)MainContent.Content).MinHeight + 43;
+            this.Width = this.MinWidth + 66;
+            this.Height = this.MinHeight + 66;
         }
     }
 }
