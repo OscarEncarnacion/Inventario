@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Clases\" />
     <Folder Include="Iconos\" />
     <Folder Include="Imagenes\" />
     <Folder Include="Views\" />
