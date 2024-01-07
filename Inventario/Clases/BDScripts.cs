@@ -77,11 +77,6 @@ namespace Inventario.Clases
             {"Acronym", "ACRONYM"},
             {"Description", "DESCRIPTION"}
         };
-        private readonly Dictionary<string, string> typeTest = new()
-        {
-            {"ID", "ID_TYPE_TEST"},
-            {"Description", "DESCRIPTION"}
-        };
         private readonly Dictionary<string, string> user = new()
         {
             {"ID", "ID_USER"},
@@ -111,7 +106,6 @@ namespace Inventario.Clases
                 "LOCATION" => location,
                 "BUSINESS_AREA" => BA,
                 "VARIANT" => variant,
-                "TYPE_TEST" => typeTest,
                 "INVENTORY_USERS" => user,
                 "BA_LOCATION" => BALocation,
                 _ => sample,
@@ -411,9 +405,6 @@ namespace Inventario.Clases
                     break;
                 case "VARIANT":
                     variant.TryGetValue("ID", out id);
-                    break;
-                case "TYPE_TEST":
-                    typeTest.TryGetValue("ID", out id);
                     break;
                 case "INVENTORY_USERS":
                     user.TryGetValue("ID", out id);

@@ -1,4 +1,5 @@
 ﻿using System;
+using Inventario.Views;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -59,59 +60,52 @@ namespace Inventario
         {
             switch (view)
             {
-                case "Users":
-                    EditContent.Content = new UserCreateView();
-                    this.MinWidth = ((UserCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((UserCreateView)EditContent.Content).MinHeight + 43;
+                case "Usuarios":
+                    EditContent.Content = new UsuarioView();
+                    this.MinWidth = ((UsuarioView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((UsuarioView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 66;
                     break;
-                case "Disciplines":
-                    EditContent.Content = new DisciplineCreateView();
-                    this.MinWidth = ((DisciplineCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((DisciplineCreateView)EditContent.Content).MinHeight + 43;
+                case "Disciplinas":
+                    EditContent.Content = new DisciplinaView();
+                    this.MinWidth = ((DisciplinaView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((DisciplinaView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Projects":
-                    EditContent.Content = new ProjectCreateView();
-                    this.MinWidth = ((ProjectCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((ProjectCreateView)EditContent.Content).MinHeight + 43;
+                case "Proyectos":
+                    EditContent.Content = new ProyectoView();
+                    this.MinWidth = ((ProyectoView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ProyectoView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Business Areas":
-                    EditContent.Content = new BACreationView();
-                    this.MinWidth = ((BACreationView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((BACreationView)EditContent.Content).MinHeight + 43;
+                case "Areas de negocio":
+                    EditContent.Content = new ANegocioView();
+                    this.MinWidth = ((ANegocioView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ANegocioView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Locations":
-                    EditContent.Content = new LocationCreateView();
-                    this.MinWidth = ((LocationCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((LocationCreateView)EditContent.Content).MinHeight + 43;
+                case "Locaciones":
+                    EditContent.Content = new LocacionView();
+                    this.MinWidth = ((LocacionView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((LocacionView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Business Area-Location":
-                    EditContent.Content = new BALocationCreationView();
-                    this.MinWidth = ((BALocationCreationView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((BALocationCreationView)EditContent.Content).MinHeight + 43;
+                case "Areas de negocio - Locacion":
+                    EditContent.Content = new ANLocacionView();
+                    this.MinWidth = ((ANLocacionView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ANLocacionView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Variants":
-                    EditContent.Content = new VariantCreateView();
-                    this.MinWidth = ((VariantCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((VariantCreateView)EditContent.Content).MinHeight + 43;
-                    this.Width = this.MinWidth + 66;
-                    this.Height = this.MinHeight + 10;
-                    break;
-                case "Type Tests":
-                    EditContent.Content = new TypeTestCreateView();
-                    this.MinWidth = ((TypeTestCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((TypeTestCreateView)EditContent.Content).MinHeight + 43;
+                case "Variantes":
+                    EditContent.Content = new VarianteView();
+                    this.MinWidth = ((VarianteView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((VarianteView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
@@ -131,59 +125,52 @@ namespace Inventario
         {
             switch (view)
             {
-                case "Users":
-                    EditContent.Content = new UserCreateView(id, isAdmin, false);
-                    this.MinWidth = ((UserCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((UserCreateView)EditContent.Content).MinHeight + 43;
+                case "Usuarios":
+                    EditContent.Content = new UsuarioView(id, isAdmin, false);
+                    this.MinWidth = ((UsuarioView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((UsuarioView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 66;
                     break;
-                case "Disciplines":
-                    EditContent.Content = new DisciplineCreateView(id, isAdmin);
-                    this.MinWidth = ((DisciplineCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((DisciplineCreateView)EditContent.Content).MinHeight + 43;
+                case "Disciplinas":
+                    EditContent.Content = new DisciplinaView(id, isAdmin);
+                    this.MinWidth = ((DisciplinaView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((DisciplinaView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Projects":
-                    EditContent.Content = new ProjectCreateView(id, isAdmin);
-                    this.MinWidth = ((ProjectCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((ProjectCreateView)EditContent.Content).MinHeight + 43;
+                case "Proyectos":
+                    EditContent.Content = new ProyectoView(id, isAdmin);
+                    this.MinWidth = ((ProyectoView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ProyectoView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Business Areas":
-                    EditContent.Content = new BACreationView(id, isAdmin);
-                    this.MinWidth = ((BACreationView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((BACreationView)EditContent.Content).MinHeight + 43;
+                case "Areas de negocio":
+                    EditContent.Content = new ANegocioView(id, isAdmin);
+                    this.MinWidth = ((ANegocioView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ANegocioView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Locations":
-                    EditContent.Content = new LocationCreateView(id, isAdmin);
-                    this.MinWidth = ((LocationCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((LocationCreateView)EditContent.Content).MinHeight + 43;
+                case "Locaciones":
+                    EditContent.Content = new LocacionView(id, isAdmin);
+                    this.MinWidth = ((LocacionView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((LocacionView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Business Area-Location":
-                    EditContent.Content = new BALocationCreationView(id, isAdmin);
-                    this.MinWidth = ((BALocationCreationView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((BALocationCreationView)EditContent.Content).MinHeight + 43;
+                case "Areas de negocio - Locacion":
+                    EditContent.Content = new ANLocacionView(id, isAdmin);
+                    this.MinWidth = ((ANLocacionView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ANLocacionView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
-                case "Variants":
-                    EditContent.Content = new VariantCreateView(id, isAdmin);
-                    this.MinWidth = ((VariantCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((VariantCreateView)EditContent.Content).MinHeight + 43;
-                    this.Width = this.MinWidth + 66;
-                    this.Height = this.MinHeight + 10;
-                    break;
-                case "Type Tests":
-                    EditContent.Content = new TypeTestCreateView(id, isAdmin);
-                    this.MinWidth = ((TypeTestCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((TypeTestCreateView)EditContent.Content).MinHeight + 43;
+                case "Variantes":
+                    EditContent.Content = new VarianteView(id, isAdmin);
+                    this.MinWidth = ((VarianteView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((VarianteView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 10;
                     break;
@@ -203,17 +190,17 @@ namespace Inventario
         {
             switch (view)
             {
-                case "Samples":
-                    EditContent.Content = new SampleCreateView(idUser);
-                    this.MinWidth = ((SampleCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((SampleCreateView)EditContent.Content).MinHeight + 43;
+                case "Proto en desarrollo":
+                    EditContent.Content = new ProtoDesarrolloView(idUser);
+                    this.MinWidth = ((ProtoDesarrolloView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ProtoDesarrolloView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 66;
                     break;
-                case "VNs":
-                    EditContent.Content = new VNCreateView(idUser);
-                    this.MinWidth = ((VNCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((VNCreateView)EditContent.Content).MinHeight + 43;
+                case "Proto en prueba":
+                    EditContent.Content = new ProtoPruebaView(idUser);
+                    this.MinWidth = ((ProtoPruebaView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ProtoPruebaView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 66;
                     break;
@@ -233,17 +220,17 @@ namespace Inventario
         {
             switch (view)
             {
-                case "Samples":
-                    EditContent.Content = new SampleCreateView(idItem, idUser, isAdmin);
-                    this.MinWidth = ((SampleCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((SampleCreateView)EditContent.Content).MinHeight + 43;
+                case "Proto en desarrollo":
+                    EditContent.Content = new ProtoDesarrolloView(idItem, idUser, isAdmin);
+                    this.MinWidth = ((ProtoDesarrolloView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ProtoDesarrolloView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 66;
                     break;
-                case "VNs":
-                    EditContent.Content = new VNCreateView(idItem, idUser, isAdmin);
-                    this.MinWidth = ((VNCreateView)EditContent.Content).MinWidth + 17;
-                    this.MinHeight = ((VNCreateView)EditContent.Content).MinHeight + 43;
+                case "Proto en prueba":
+                    EditContent.Content = new ProtoPruebaView(idItem, idUser, isAdmin);
+                    this.MinWidth = ((ProtoPruebaView)EditContent.Content).MinWidth + 17;
+                    this.MinHeight = ((ProtoPruebaView)EditContent.Content).MinHeight + 43;
                     this.Width = this.MinWidth + 66;
                     this.Height = this.MinHeight + 66;
                     break;
@@ -261,9 +248,9 @@ namespace Inventario
         // View and edit your own user
         private void LoadViewUserPerfilIcon(decimal id, bool isAdmin, bool isPerfilIcon)
         {
-            EditContent.Content = new UserCreateView(id, isAdmin, isPerfilIcon);
-            this.MinWidth = ((UserCreateView)EditContent.Content).MinWidth + 17;
-            this.MinHeight = ((UserCreateView)EditContent.Content).MinHeight + 43;
+            EditContent.Content = new UsuarioView(id, isAdmin, isPerfilIcon);
+            this.MinWidth = ((UsuarioView)EditContent.Content).MinWidth + 17;
+            this.MinHeight = ((UsuarioView)EditContent.Content).MinHeight + 43;
             this.Width = this.MinWidth + 66;
             this.Height = this.MinHeight + 66;
         }

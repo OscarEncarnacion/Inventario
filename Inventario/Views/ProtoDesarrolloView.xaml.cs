@@ -20,7 +20,7 @@ namespace Inventario.Views
     /// <summary>
     /// Lógica de interacción para ProtoDesarrollo.xaml
     /// </summary>
-    public partial class ProtoDesarrollo : UserControl
+    public partial class ProtoDesarrolloView : UserControl
     {
         private decimal idUserG = 0;
         private decimal idItemG = 0;
@@ -40,14 +40,14 @@ namespace Inventario.Views
         };
 
         // Constructor para crear un prototipo en desarrollo
-        public ProtoDesarrollo(decimal idUser)
+        public ProtoDesarrolloView(decimal idUser)
         {
             InitializeComponent();
             ConfigureView(0, idUser, "create");
         }
 
         // Constructor para ver o editar un prototipo en desarrollo
-        public ProtoDesarrollo(decimal idItem, decimal idUser, bool isAdmin)
+        public ProtoDesarrolloView(decimal idItem, decimal idUser, bool isAdmin)
         {
             InitializeComponent();
             if (isAdmin)

@@ -21,7 +21,7 @@ namespace Inventario.Views
     /// <summary>
     /// Lógica de interacción para ProtoPrueba.xaml
     /// </summary>
-    public partial class ProtoPrueba : UserControl
+    public partial class ProtoPruebaView : UserControl
     {
         private decimal idUserG = 0;
         private decimal idItemG = 0;
@@ -41,14 +41,14 @@ namespace Inventario.Views
         };
 
         // Constructor to create new VN
-        public ProtoPrueba(decimal idUser)
+        public ProtoPruebaView(decimal idUser)
         {
             InitializeComponent();
             ConfigureView(0, idUser, "create");
         }
 
         // Constructor to view and edit VN
-        public ProtoPrueba(decimal idItem, decimal idUser, bool isAdmin)
+        public ProtoPruebaView(decimal idItem, decimal idUser, bool isAdmin)
         {
             InitializeComponent();
             if (isAdmin)
