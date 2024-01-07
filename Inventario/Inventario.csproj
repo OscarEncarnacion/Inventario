@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Iconos\" />
-    <Folder Include="Imagenes\" />
   </ItemGroup>
 
 </Project>
