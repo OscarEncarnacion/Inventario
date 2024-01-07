@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="Inventario.Views.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Inventario.Views"
+             mc:Ignorable="d" 
+             MinHeight="450" MinWidth="700"
+             d:DesignHeight="650" d:DesignWidth="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Inventario" Foreground="DarkGreen"  FontSize="25"/>
+            <WrapPanel Grid.Column="2" HorizontalAlignment="Right">
+                <Image Source="C:\Users\UIF58536\Documents\CursosLibrosManuales\Udemy\C#\NetYWPF\Inventory3Sol\Inventory3\Image\ContinentalLogo.png" Stretch="Uniform"/>
+            </WrapPanel>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1">
+                <Label Content="Usuario" HorizontalAlignment="Left"/>
+                <TextBox x:Name="tbUser" TextChanged="TbUser_TextChanged" KeyDown="EnterKeyLogin_KeyDown" MaxLength="18"/>
+                <Label Content="Contraseña" HorizontalAlignment="Left"/>
+                <PasswordBox x:Name="pbPassword" PasswordChanged="PbPassword_PasswordChanged" KeyDown="EnterKeyLogin_KeyDown" MaxLength="15"/>
+                <!--<CheckBox Content="Remenber me" HorizontalAlignment="Center" Margin="0,15,0,0"/>-->
+                <Label x:Name="connectionInformation" Content="" HorizontalAlignment="Center" Foreground="Red" Margin="0,0,0,15"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnLogin" Grid.Column="1" Content="Ingresar" FontSize="18"  Click="BtnLogin_Click" IsEnabled="False"/>
+                </Grid>
+                <TextBlock HorizontalAlignment="Center" Margin="10"> No tienes una cuenta?
+                    <TextBlock Foreground="Blue" MouseLeftButtonDown="Register_MouseLeftButtonDown" Text="Registrate">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="TextDecorations" Value="Underline"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

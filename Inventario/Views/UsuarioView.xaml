@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="Inventario.Views.UsuarioView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Inventario.Views"
+             mc:Ignorable="d" 
+             MinHeight="390" MinWidth="800"
+             d:DesignHeight="390" d:DesignWidth="800">
+    <Border BorderBrush="AliceBlue" BorderThickness="2" Margin="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="37*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="1" Grid.Row="0" x:Name="girdTop">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Name="lblTitle" Grid.Column="0" VerticalAlignment="Center" Content="Usuario" FontSize="16" Foreground="DarkGreen"/>
+                <StackPanel Grid.Column="1" Name="editButtonStackPanel" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1" x:Name="fieldGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel x:Name="nameStackPanel" Grid.Column="0" Grid.Row="0" Margin="0,0,15,0" VerticalAlignment="Center">
+                    <Label Name="nameLabel" Content="Name" HorizontalAlignment="Left"/>
+                    <TextBox Name="nameTextBox" MaxLength="30"/>
+                </StackPanel>
+                <StackPanel x:Name="lastNameStackPanel" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center">
+                    <Label Name="lastNameLabel" Content="Last name" HorizontalAlignment="Left"/>
+                    <TextBox Name="lastNameTextBox" MaxLength="50"/>
+                </StackPanel>
+                <StackPanel x:Name="employeeNumberStackPanel" Grid.Column="0" Grid.Row="1" Margin="0,0,15,0" VerticalAlignment="Center">
+                    <Label Name="employeeNumberLabel" Content="Employee number" HorizontalAlignment="Left"/>
+                    <TextBox Name="employeeNumberTextBox" MaxLength="18"/>
+                </StackPanel>
+                <StackPanel x:Name="eMailStackPanel" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
+                    <Label Name="eMailLabel" Content="Email" HorizontalAlignment="Left"/>
+                    <TextBox Name="eMailTextBox" MaxLength="50"/>
+                </StackPanel>
+                <StackPanel x:Name="businessAreaStackPanel" Grid.Column="0" Grid.Row="2" Margin="0,0,15,0" VerticalAlignment="Center">
+                    <Label Name="businessAreaLabel" Content="Business Area - Location" HorizontalAlignment="Left"/>
+                    <Border Name="borderComboBox" BorderThickness="1">
+                        <ComboBox Name="businessAreaComboBox" MaxDropDownHeight="180"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Name="passwordStackPanel" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center">
+                    <Label Name="passwordLabel" Content="Password" HorizontalAlignment="Left"/>
+                    <PasswordBox Name="passwordTextBox" MaxLength="15"/>
+                </StackPanel>
+                <StackPanel Name="confirmPasswordStackPanel" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center">
+                    <Label Name="confirmPasswordLabel" Content="Confirm password" HorizontalAlignment="Left"/>
+                    <PasswordBox Name="confirmPasswordTextBox" MaxLength="15"/>
+                </StackPanel>
+                <StackPanel Name="stackPanelFree" Grid.Column="1" Grid.Row="2" Grid.RowSpan="3">
+                    <Label Name="statusBarPassword" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="11" Content="" Foreground="Blue" Margin="0, 15, 0, 0"/>
+                </StackPanel>
+            </Grid>
+            <Grid Name="gridButtons" Grid.Column="1" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <Button x:Name="btnClean" Grid.Column="0" Grid.Row="0" Content="Limpiar" Click="BtnClean_Click"/>
+                <Button x:Name="btnCreate" Grid.Column="2" Grid.Row="0" Content="Crear" Click="BtnCreate_Click"/>
+                <Button x:Name="btnCancel" Grid.Column="2" Grid.Row="2" Content="Cancelar" Click="BtnCancel_Click"/>
+                <Label Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Name="statusBar" Content="" Foreground="Red" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>
